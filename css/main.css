@@ -1,0 +1,69 @@
+@charset "utf-8";
+/* CSS Document */
+body{-webkit-text-size-adjust:none; background:#ffffff;}
+body,button, input, select, textarea { font: 12px Microsoft YaHei,"微软雅黑",simsun,Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;}
+body, h1, h2, h3, h4, h5, h6, hr, p, dl, dt, dd, ul, ol, li, pre, fieldset, lengend, button, input, textarea,th,td,code,form{ margin: 0;padding: 0;}
+button, input, select, textarea {font-size: 100%;}
+ul,li{list-style:none;}
+ul{ vertical-align:middle}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+hr {border: none;height: 1px;}
+select{height:22px; line-height:18px; padding:2px 0}
+a{ text-decoration:none;outline:none; color:#4585c3 }
+a:hover{ text-decoration:none;}
+i,em{ font-style:normal;}
+img,img a{border:0;}
+img{max-width:100%}
+body {
+	font-size:10px;
+}
+
+#profile {
+	-webkit-perspective: 400;
+	-webkit-perspective-origin: 50% 100px;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+#cube {
+	position: relative;
+	margin: 0 auto;
+	margin-top: 35px;
+	height: 200px;
+	width: 200px;	
+	-webkit-transition: -webkit-transform 2s linear;
+	-webkit-transform-style: preserve-3d;
+}
+.face {
+	position: absolute;
+	height: 178px;
+	width: 178px;
+	padding: 10px;
+	border: 1px solid #39aba4;
+	color:#fff;
+	background-color: RGBA(132,205,194,0.7);
+	-webkit-text-stroke: 1px transparent;
+}
+.face a{
+	color:#fff;
+	text-decoration:none;
+	font-weight:bold;	
+}
+#cube .one {
+	-webkit-transform: rotateX(90deg) translateZ(100px);
+}
+#cube .two {
+	-webkit-transform: translateZ(100px);
+}
+#cube .three {
+	-webkit-transform: rotateY(90deg) translateZ(100px);
+}
+#cube .four {
+	-webkit-transform: rotateY(180deg) translateZ(100px);
+}
+#cube .five {
+	-webkit-transform: rotateY(-90deg) translateZ(100px);
+}
+#cube .six {
+	-webkit-transform: rotateX(-90deg) translateZ(100px);
+}
+#d_keys { cursor:pointer; -webkit-user-select: none}
+#keys { position:fixed; bottom: 10px; right: 10px; display:none}

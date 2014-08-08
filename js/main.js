@@ -1,8 +1,8 @@
 var cube = document.getElementById('cube');
-var d_keys = document.getElementById('d_keys');
-var keys = document.getElementById('keys');
+var box_hint = document.getClass('box_hint');
+var hint = document.getClass('hint');
 var win_h = document.documentElement.clientHeight;
-console.log(win_h);
+
 if(win_h > 270){
 	cube.style.marginTop = win_h/2 - 110 + "px";
 }
@@ -32,10 +32,41 @@ document.addEventListener('keydown', function(e) {
 	cube.style.webkitTransform = "rotateX("+xAngle+"deg) rotateY("+yAngle+"deg)";
 }, false);
 
-d_keys.addEventListener('click', function(e) {
-	if(keys.style.display != "block"){
-		keys.style.display = "block";
-	}else{
-		keys.style.display = "none";
+swipedetect(cube, function(swipedir){
+	switch(swipedir) {
+	
+	  case 'left': // left
+		yAngle -= 90;
+		break;
+	
+	  case 'up': // up
+		xAngle += 90;
+		break;
+	
+	  case 'right': // right
+		yAngle += 90;
+		break;
+	
+	  case 'down': // down
+		xAngle -= 90;
+		break;
+	};
+	
+	cube.style.webkitTransform = "rotateX("+xAngle+"deg) rotateY("+yAngle+"deg)";
+})
+
+for (var bhi = 0; bhi< box_hint.length; bhi++) {
+		box_hint[bhi].addHandler('click', function(event){
+			var _this = this;
+			for(var j = 0; j < hint.length; j++){
+				if(EventUtil.isChildorSelf(_this,hint[j])){
+					if(hint[j].getStyle('display') != "block"){
+						hint[j].setStyle({'display':'block'});
+					}else{
+						hint[j].setStyle({'display':'none'});
+					}
+				}
+			}
+	    	EventUtil.stopPropagation(event);
+		});
 	}
-}, false);

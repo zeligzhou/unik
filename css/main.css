@@ -65,5 +65,5 @@ body {
 #cube .six {
 	-webkit-transform: rotateX(-90deg) translateZ(100px);
 }
-#d_keys { cursor:pointer; -webkit-user-select: none}
-#keys { position:fixed; bottom: 10px; right: 10px; display:none}
+.box_hint { cursor:pointer; -webkit-user-select: none}
+.hint { position:fixed; bottom: 10px; right: 10px; display:none; font-weight:lighter;}

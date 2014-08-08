@@ -1,5 +1,6 @@
 /**
 * DOM组件，DOM扩展组件DOMextend，事件处理组件EventUtil
+* 触摸方向检测
 *
 **/
 
@@ -297,7 +298,7 @@ function swipedetect(el, callback){
    }
   }
   handleswipe(swipedir)
-  e.preventDefault()
+  //e.preventDefault()
  }, false)
 }
  

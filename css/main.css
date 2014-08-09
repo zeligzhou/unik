@@ -18,6 +18,15 @@ body {
 	font-size:10px;
 }
 
+.fs12{ font-size: 1.2em;}
+.fs14{ font-size: 1.4em;}
+.fs16{ font-size: 1.6em;}
+.fs18{ font-size: 1.8em;}
+.fs20{ font-size: 2.0em;}
+.tar {text-align: right;}
+.mt30 {margin-top: 30px;}
+.mb10 {margin-bottom: 10px;}
+
 #profile {
 	-webkit-perspective: 400;
 	-webkit-perspective-origin: 50% 100px;

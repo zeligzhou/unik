@@ -26,7 +26,11 @@ body {
 .tar {text-align: right;}
 .mt30 {margin-top: 30px;}
 .mb10 {margin-bottom: 10px;}
-
+.art {
+	font-family: "Adobe Garamond Pro", Garamond, Palatino, "Palatino Linotype", Times, "Times New Roman", Georgia, serif;
+    font-weight: normal;
+    font-style: italic;
+}
 #profile {
 	-webkit-perspective: 400;
 	-webkit-perspective-origin: 50% 100px;
